@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D8A696422133AC0007B1ABA /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A696322133AC0007B1ABA /* ContainerController.swift */; };
+		4D8A696622133AD5007B1ABA /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A696522133AD5007B1ABA /* HomeController.swift */; };
+		4D8A696822133AE4007B1ABA /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A696722133AE4007B1ABA /* MenuController.swift */; };
+		4D8A696A221359AD007B1ABA /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8A6969221359AD007B1ABA /* Protocols.swift */; };
 		4D99C8C5220F05F800192F07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D99C8C4220F05F800192F07 /* AppDelegate.swift */; };
 		4D99C8C7220F05F800192F07 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D99C8C6220F05F800192F07 /* ViewController.swift */; };
 		4D99C8CA220F05F800192F07 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D99C8C8220F05F800192F07 /* Main.storyboard */; };
 		4D99C8CC220F05F900192F07 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D99C8CB220F05F900192F07 /* Assets.xcassets */; };
 		4D99C8CF220F05F900192F07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D99C8CD220F05F900192F07 /* LaunchScreen.storyboard */; };
+		4D9F3FE02214061D00AF9B5A /* MenuOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9F3FDF2214061D00AF9B5A /* MenuOptionCell.swift */; };
+		4D9F3FE2221413D900AF9B5A /* MenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9F3FE1221413D900AF9B5A /* MenuOption.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D8A696322133AC0007B1ABA /* ContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
+		4D8A696522133AD5007B1ABA /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		4D8A696722133AE4007B1ABA /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		4D8A6969221359AD007B1ABA /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		4D99C8C1220F05F700192F07 /* HelpHoReCa_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpHoReCa_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D99C8C4220F05F800192F07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D99C8C6220F05F800192F07 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +32,8 @@
 		4D99C8CB220F05F900192F07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D99C8CE220F05F900192F07 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D99C8D0220F05F900192F07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D9F3FDF2214061D00AF9B5A /* MenuOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionCell.swift; sourceTree = "<group>"; };
+		4D9F3FE1221413D900AF9B5A /* MenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOption.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +47,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D8A695F22133A4D007B1ABA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4D8A696322133AC0007B1ABA /* ContainerController.swift */,
+				4D8A696522133AD5007B1ABA /* HomeController.swift */,
+				4D8A696722133AE4007B1ABA /* MenuController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4D8A696022133A53007B1ABA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D9F3FDF2214061D00AF9B5A /* MenuOptionCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4D8A696122133A55007B1ABA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D9F3FE1221413D900AF9B5A /* MenuOption.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4D8A696222133A57007B1ABA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4D8A6969221359AD007B1ABA /* Protocols.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		4D99C8B8220F05F700192F07 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +100,10 @@
 		4D99C8C3220F05F700192F07 /* HelpHoReCa_IOS */ = {
 			isa = PBXGroup;
 			children = (
+				4D8A696222133A57007B1ABA /* Utils */,
+				4D8A696122133A55007B1ABA /* Model */,
+				4D8A696022133A53007B1ABA /* View */,
+				4D8A695F22133A4D007B1ABA /* Controller */,
 				4D99C8C4220F05F800192F07 /* AppDelegate.swift */,
 				4D99C8C6220F05F800192F07 /* ViewController.swift */,
 				4D99C8C8220F05F800192F07 /* Main.storyboard */,
@@ -135,8 +185,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D9F3FE02214061D00AF9B5A /* MenuOptionCell.swift in Sources */,
+				4D9F3FE2221413D900AF9B5A /* MenuOption.swift in Sources */,
+				4D8A696822133AE4007B1ABA /* MenuController.swift in Sources */,
+				4D8A696622133AD5007B1ABA /* HomeController.swift in Sources */,
 				4D99C8C7220F05F800192F07 /* ViewController.swift in Sources */,
+				4D8A696A221359AD007B1ABA /* Protocols.swift in Sources */,
 				4D99C8C5220F05F800192F07 /* AppDelegate.swift in Sources */,
+				4D8A696422133AC0007B1ABA /* ContainerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +348,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "HelpHoReCa.HelpHoReCa-IOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +366,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "HelpHoReCa.HelpHoReCa-IOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
