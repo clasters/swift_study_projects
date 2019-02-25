@@ -11,7 +11,8 @@ import WebKit
 import Foundation
 class ViewController: UIViewController {
 
-    static var bannedID: String?
+    var bannedID: String?
+    var giftID: String?
     static let key = "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODIxNTQxNzAsImlhdCI6MTU1MDYxODE3MCwicmF5IjoiMzYyMzQzNGFjOTczYjUxOTYxZDZkZmYzNzMyYTRiZmEiLCJzdWIiOjE0MTk0MH0.eYlBO1tQhsByX5Fyzm50a3BzM070oI7FeVlgnEpakOwHCQPgkXHS0QDNTx46mn4VWNUITptTeOfLFxQWgET3Maqoi1-p60ORWfOtP1EaoTcHyxZO5i7ewp168Nusme3omK3Vb2ww_HBOmDFla3ZIwh2DDkefniZOF3CRs-jyPbfl-kYLTa9ZR0hrAfBKmcnjkxHddl-j2WKrnrJG6kxij88C7Rlmav1r_6J9YY0v-ow5yHZcit89w3Rr1wKfH_x-Y-GHN8olzivkPS4rTlTE_965NTSv6GCMn-Sd2yZpaVWw_ruxfNaTmqIPkRql0_uLdZnMzKFj_ERZtvuytxtaFg"
     @IBOutlet weak var webView: WKWebView!
    
@@ -44,21 +45,20 @@ class ViewController: UIViewController {
                     orderID = "\(id)"
                 }
                 
-                self.bannedNumber(id: ViewController.bannedID )
-                ViewController.bannedID = orderID
+                self.bannedNumber(id: self.bannedID )
+                self.bannedID = orderID
                 phoneNumber = String((phoneNumber?.dropFirst(2))!)
                 UIPasteboard.general.string = phoneNumber
  let url = URL(string: "https://game.lenta.com")
                 
-                do{
+                
                     DispatchQueue.main.async {
                 HTTPCookieStorage.shared.removeCookies(since: Date.distantPast)
-                
                 WKWebsiteDataStore.default().fetchDataRecords(ofTypes: WKWebsiteDataStore.allWebsiteDataTypes()) { records in
                     records.forEach { record in
                         WKWebsiteDataStore.default().removeData(ofTypes: record.dataTypes, for: [record], completionHandler: {})
                     }}
-                    }}catch{}
+                    }
                 sleep(1)
                 self.webView.load(URLRequest(url: url!))
                 
@@ -109,8 +109,8 @@ class ViewController: UIViewController {
     
     //Get a link to a gift
     @IBAction func getGift(_ sender: Any) {
-        
-        guard let url = URL(string: "https://5sim.net/v1/user/check/16437522" ) else { return }
+        let error = "Empty"
+        guard let url = URL(string: "https://5sim.net/v1/user/check/\(self.bannedID ?? error)" ) else { return }
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -126,20 +126,17 @@ class ViewController: UIViewController {
             guard let _ = response, let data = data else { return }
             
             do {
-                let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String: AnyObject]
-                print(json)
-                
-               // let product: gift = try! JSONDecoder().decode(gift.self, for: data)
-                
-                
-                guard let gift = json["sms"] else {return}
-                guard let gifturl = gift["code"] as? String else {return}
+                let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String : Any]
 
+                guard let gift = json["sms"] as? [[String : Any]] else {return}
+                guard let gifturl = "https://game.lenta.com/?r=\(gift[0]["code"]!)"  as? String  else {return}
+               
                 UIPasteboard.general.string =  gifturl
 
                 if let url = URL(string: gifturl ), UIApplication.shared.canOpenURL(url) {
                     UIApplication.shared.open(url)
                 }
+                
                 
             } catch {
                 print(error)

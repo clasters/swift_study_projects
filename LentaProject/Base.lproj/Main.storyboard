@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LentaProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4VH-MP-7c7">
-                                <rect key="frame" x="0.0" y="55" width="320" height="513"/>
+                                <rect key="frame" x="0.0" y="55" width="320" height="425"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -27,10 +26,11 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NC0-wk-hZL">
-                                <rect key="frame" x="0.0" y="20" width="320" height="30"/>
+                                <rect key="frame" x="0.0" y="52" width="320" height="31"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Lmi-Rv-aUm"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="JIR-Sj-fOk"/>
+                                    <constraint firstAttribute="height" constant="31" id="kL4-iS-pE7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="NotoSansChakma-Regular" family="Noto Sans Chakma" pointSize="25"/>
                                 <state key="normal" title="Get a Number">
@@ -40,16 +40,36 @@
                                     <action selector="getRequest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WaD-tQ-usC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVe-Bd-Ctr">
+                                <rect key="frame" x="0.0" y="20" width="320" height="31"/>
+                                <color key="backgroundColor" red="0.053829548939999999" green="0.83282695559999997" blue="0.43577740949999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="UP4-5F-QqU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="17"/>
+                                <state key="normal" title="Gift">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getGift:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3CZ-ss-Q5R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NC0-wk-hZL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CSc-la-88j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NC0-wk-hZL" secondAttribute="trailing" id="55h-kn-SD5"/>
                             <constraint firstItem="4VH-MP-7c7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="55" id="FdQ-wZ-wlh"/>
-                            <constraint firstItem="NC0-wk-hZL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RVT-xM-2xD"/>
+                            <constraint firstItem="NC0-wk-hZL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KH0-1U-n6I"/>
+                            <constraint firstItem="NC0-wk-hZL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="OZZ-AL-sQd"/>
+                            <constraint firstItem="NC0-wk-hZL" firstAttribute="top" secondItem="BVe-Bd-Ctr" secondAttribute="bottom" constant="31" id="RfL-JN-oIN"/>
                             <constraint firstItem="4VH-MP-7c7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sob-VB-jRb"/>
+                            <constraint firstItem="BVe-Bd-Ctr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TgF-nm-gk0"/>
+                            <constraint firstItem="BVe-Bd-Ctr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="app-D6-eX9"/>
                             <constraint firstItem="4VH-MP-7c7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="csM-ER-0en"/>
-                            <constraint firstItem="NC0-wk-hZL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kGN-mV-ph8"/>
+                            <constraint firstItem="BVe-Bd-Ctr" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lzN-xd-DPc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NC0-wk-hZL" secondAttribute="trailing" id="mMG-gR-MWx"/>
                             <constraint firstItem="4VH-MP-7c7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="pPS-rY-XLM"/>
+                            <constraint firstItem="NC0-wk-hZL" firstAttribute="top" secondItem="BVe-Bd-Ctr" secondAttribute="bottom" constant="1" id="qkF-ba-vC8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -59,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="132.68365817091455"/>
+            <point key="canvasLocation" x="131.25" y="131.25"/>
         </scene>
     </scenes>
 </document>
