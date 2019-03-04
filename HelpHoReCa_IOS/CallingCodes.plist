@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+    <dict>
+        <key>code</key>
+        <string>RU</string>
+        <key>dial_code</key>
+        <string>+7</string>
+        <key>name</key>
+        <string>Россия</string>
+    </dict>
+    <dict>
+        <key>code</key>
+        <string>UA</string>
+        <key>dial_code</key>
+        <string>+380</string>
+        <key>name</key>
+        <string>Ukraine</string>
+    </dict>
+    <dict>
+        <key>code</key>
+        <string>BY</string>
+        <key>dial_code</key>
+        <string>+375</string>
+        <key>name</key>
+        <string>Belarus</string>
+    </dict>
+	<dict>
+		<key>code</key>
+		<string>AT</string>
+		<key>dial_code</key>
+		<string>+43</string>
+		<key>name</key>
+		<string>Austria</string>
+	</dict>
+	<dict>
+		<key>code</key>
+		<string>AZ</string>
+		<key>dial_code</key>
+		<string>+994</string>
+		<key>name</key>
+		<string>Azerbaijan</string>
+	</dict>
+	
+
+	
+	<dict>
+		<key>code</key>
+		<string>CA</string>
+		<key>dial_code</key>
+		<string>+1</string>
+		<key>name</key>
+		<string>Canada</string>
+	</dict>
+	
+	<dict>
+		<key>code</key>
+		<string>CN</string>
+		<key>dial_code</key>
+		<string>+86</string>
+		<key>name</key>
+		<string>China</string>
+	</dict>
+	
+	
+	<dict>
+		<key>code</key>
+		<string>FR</string>
+		<key>dial_code</key>
+		<string>+33</string>
+		<key>name</key>
+		<string>France</string>
+	</dict>
+	
+	<dict>
+		<key>code</key>
+		<string>DE</string>
+		<key>dial_code</key>
+		<string>+49</string>
+		<key>name</key>
+		<string>Germany</string>
+	</dict>
+	
+	<dict>
+		<key>code</key>
+		<string>JP</string>
+		<key>dial_code</key>
+		<string>+81</string>
+		<key>name</key>
+		<string>Japan</string>
+	</dict>
+	
+	<dict>
+		<key>code</key>
+		<string>KZ</string>
+		<key>dial_code</key>
+		<string>+77</string>
+		<key>name</key>
+		<string>Kazakhstan</string>
+	</dict>
+	
+	<dict>
+		<key>code</key>
+		<string>KG</string>
+		<key>dial_code</key>
+		<string>+996</string>
+		<key>name</key>
+		<string>Kyrgyzstan</string>
+	</dict>
+	
+
+ 
+    <dict>
+        <key>code</key>
+        <string>GB</string>
+        <key>dial_code</key>
+        <string>+44</string>
+        <key>name</key>
+        <string>United Kingdom</string>
+    </dict>
+
+
+    <dict>
+        <key>code</key>
+        <string>UZ</string>
+        <key>dial_code</key>
+        <string>+998</string>
+        <key>name</key>
+        <string>Uzbekistan</string>
+    </dict>
+	
+</array>
+</plist>

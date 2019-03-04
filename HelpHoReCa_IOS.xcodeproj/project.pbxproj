@@ -7,21 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D977808222D3C52006B5288 /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D977804222D3C52006B5288 /* ThemeManager.swift */; };
+		4D97781E222D3F77006B5288 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D97781D222D3F77006B5288 /* MainTabBarController.swift */; };
+		4D977820222D3FD8006B5288 /* PhoneNumberViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D97781F222D3FD8006B5288 /* PhoneNumberViewContainer.swift */; };
+		4D977822222D3FFC006B5288 /* PhoneNumberController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D977821222D3FFC006B5288 /* PhoneNumberController.swift */; };
+		4D977824222D4054006B5288 /* PhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D977823222D4054006B5288 /* PhoneNumberViewController.swift */; };
+		4D977826222D407C006B5288 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D977825222D407C006B5288 /* Country.swift */; };
+		4D977828222D40BE006B5288 /* CountryCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D977827222D40BE006B5288 /* CountryCodeViewController.swift */; };
+		4D97782A222D4143006B5288 /* CallingCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D977829222D4143006B5288 /* CallingCodes.plist */; };
+		4D977836222D42BB006B5288 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D977832222D42BB006B5288 /* ViewExtensions.swift */; };
+		4D977838222D42BB006B5288 /* TableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D977834222D42BB006B5288 /* TableViewCellExtensions.swift */; };
+		4D977839222D42BB006B5288 /* MethodExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D977835222D42BB006B5288 /* MethodExtensions.swift */; };
+		4D97783B222D43B9006B5288 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D97783A222D43B9006B5288 /* RegisterController.swift */; };
+		4D97783F222D43EF006B5288 /* VerificationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D97783D222D43EF006B5288 /* VerificationCodeViewController.swift */; };
+		4D977840222D43EF006B5288 /* VerificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D97783E222D43EF006B5288 /* VerificationController.swift */; };
+		4D977843222D43FA006B5288 /* VerificationViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D977842222D43FA006B5288 /* VerificationViewContainer.swift */; };
 		4DA7DBCE222677F0009513B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7DBCD222677F0009513B3 /* AppDelegate.swift */; };
-		4DA7DBD0222677F0009513B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7DBCF222677F0009513B3 /* ViewController.swift */; };
 		4DA7DBD3222677F0009513B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA7DBD1222677F0009513B3 /* Main.storyboard */; };
 		4DA7DBD5222677F1009513B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA7DBD4222677F1009513B3 /* Assets.xcassets */; };
 		4DA7DBD8222677F1009513B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA7DBD6222677F1009513B3 /* LaunchScreen.storyboard */; };
+		4DA7DBE022267815009513B3 /* ContainerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7DBDF22267815009513B3 /* ContainerController.swift */; };
+		4DA7DBE222267831009513B3 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7DBE122267831009513B3 /* HomeController.swift */; };
+		4DA7DBE42226784C009513B3 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7DBE32226784C009513B3 /* MenuController.swift */; };
+		4DA7DBE622267866009513B3 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7DBE522267866009513B3 /* SettingsController.swift */; };
+		4DA7DBE92226789A009513B3 /* MenuOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7DBE82226789A009513B3 /* MenuOptionCell.swift */; };
+		4DA7DBEC222678BF009513B3 /* MenuOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7DBEB222678BF009513B3 /* MenuOption.swift */; };
+		4DA7DBEF222678D9009513B3 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7DBEE222678D9009513B3 /* Protocols.swift */; };
+		D67030908354AA46747A1BCE /* Pods_HelpHoReCa_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFAB1975B60874C52A2D7C4 /* Pods_HelpHoReCa_IOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D977804222D3C52006B5288 /* ThemeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		4D97781D222D3F77006B5288 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		4D97781F222D3FD8006B5288 /* PhoneNumberViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewContainer.swift; sourceTree = "<group>"; };
+		4D977821222D3FFC006B5288 /* PhoneNumberController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberController.swift; sourceTree = "<group>"; };
+		4D977823222D4054006B5288 /* PhoneNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewController.swift; sourceTree = "<group>"; };
+		4D977825222D407C006B5288 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		4D977827222D40BE006B5288 /* CountryCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryCodeViewController.swift; sourceTree = "<group>"; };
+		4D977829222D4143006B5288 /* CallingCodes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CallingCodes.plist; sourceTree = "<group>"; };
+		4D977832222D42BB006B5288 /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		4D977834222D42BB006B5288 /* TableViewCellExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellExtensions.swift; sourceTree = "<group>"; };
+		4D977835222D42BB006B5288 /* MethodExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodExtensions.swift; sourceTree = "<group>"; };
+		4D97783A222D43B9006B5288 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		4D97783D222D43EF006B5288 /* VerificationCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationCodeViewController.swift; sourceTree = "<group>"; };
+		4D97783E222D43EF006B5288 /* VerificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationController.swift; sourceTree = "<group>"; };
+		4D977842222D43FA006B5288 /* VerificationViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewContainer.swift; sourceTree = "<group>"; };
 		4DA7DBCA222677F0009513B3 /* HelpHoReCa_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelpHoReCa_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA7DBCD222677F0009513B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4DA7DBCF222677F0009513B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4DA7DBD2222677F0009513B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DA7DBD4222677F1009513B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DA7DBD7222677F1009513B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DA7DBD9222677F1009513B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DA7DBDF22267815009513B3 /* ContainerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerController.swift; sourceTree = "<group>"; };
+		4DA7DBE122267831009513B3 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		4DA7DBE32226784C009513B3 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		4DA7DBE522267866009513B3 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		4DA7DBE82226789A009513B3 /* MenuOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOptionCell.swift; sourceTree = "<group>"; };
+		4DA7DBEB222678BF009513B3 /* MenuOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOption.swift; sourceTree = "<group>"; };
+		4DA7DBEE222678D9009513B3 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		A4D01A33AB2FC399D1FE1F64 /* Pods-HelpHoReCa_IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelpHoReCa_IOS.release.xcconfig"; path = "Target Support Files/Pods-HelpHoReCa_IOS/Pods-HelpHoReCa_IOS.release.xcconfig"; sourceTree = "<group>"; };
+		AAA4BD4EB5F19E2F570F1082 /* Pods-HelpHoReCa_IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelpHoReCa_IOS.debug.xcconfig"; path = "Target Support Files/Pods-HelpHoReCa_IOS/Pods-HelpHoReCa_IOS.debug.xcconfig"; sourceTree = "<group>"; };
+		AFFAB1975B60874C52A2D7C4 /* Pods_HelpHoReCa_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelpHoReCa_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +75,105 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D67030908354AA46747A1BCE /* Pods_HelpHoReCa_IOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1591F9E5A57C41C577E7905A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFFAB1975B60874C52A2D7C4 /* Pods_HelpHoReCa_IOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4D977803222D3C52006B5288 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4D977804222D3C52006B5288 /* ThemeManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		4D977831222D42BB006B5288 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4D977832222D42BB006B5288 /* ViewExtensions.swift */,
+				4D977834222D42BB006B5288 /* TableViewCellExtensions.swift */,
+				4D977835222D42BB006B5288 /* MethodExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4D97783C222D43EF006B5288 /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+				4D97783E222D43EF006B5288 /* VerificationController.swift */,
+				4D97783D222D43EF006B5288 /* VerificationCodeViewController.swift */,
+			);
+			path = Verification;
+			sourceTree = "<group>";
+		};
+		4D977846222D959E006B5288 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				4D977848222D95FC006B5288 /* Verification */,
+				4D977847222D95BD006B5288 /* PhoneNumber */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
+		4D977847222D95BD006B5288 /* PhoneNumber */ = {
+			isa = PBXGroup;
+			children = (
+				4D97781F222D3FD8006B5288 /* PhoneNumberViewContainer.swift */,
+			);
+			path = PhoneNumber;
+			sourceTree = "<group>";
+		};
+		4D977848222D95FC006B5288 /* Verification */ = {
+			isa = PBXGroup;
+			children = (
+				4D977842222D43FA006B5288 /* VerificationViewContainer.swift */,
+			);
+			path = Verification;
+			sourceTree = "<group>";
+		};
+		4D977849222D963B006B5288 /* Country */ = {
+			isa = PBXGroup;
+			children = (
+				4D977827222D40BE006B5288 /* CountryCodeViewController.swift */,
+			);
+			path = Country;
+			sourceTree = "<group>";
+		};
+		4D97784A222D9692006B5288 /* PhoneNumber */ = {
+			isa = PBXGroup;
+			children = (
+				4D977821222D3FFC006B5288 /* PhoneNumberController.swift */,
+				4D977823222D4054006B5288 /* PhoneNumberViewController.swift */,
+			);
+			path = PhoneNumber;
+			sourceTree = "<group>";
+		};
+		4D97784B222DB0E0006B5288 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				4D97783A222D43B9006B5288 /* RegisterController.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
 		4DA7DBC1222677F0009513B3 = {
 			isa = PBXGroup;
 			children = (
 				4DA7DBCC222677F0009513B3 /* HelpHoReCa_IOS */,
 				4DA7DBCB222677F0009513B3 /* Products */,
+				B410E67294E4B525D0C93DEC /* Pods */,
+				1591F9E5A57C41C577E7905A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +188,71 @@
 		4DA7DBCC222677F0009513B3 /* HelpHoReCa_IOS */ = {
 			isa = PBXGroup;
 			children = (
-				4DA7DBCD222677F0009513B3 /* AppDelegate.swift */,
-				4DA7DBCF222677F0009513B3 /* ViewController.swift */,
+				4D977831222D42BB006B5288 /* Extensions */,
+				4D977803222D3C52006B5288 /* Managers */,
+				4DA7DBF0222678E3009513B3 /* Utils */,
+				4DA7DBED222678CA009513B3 /* Model */,
+				4DA7DBEA222678AF009513B3 /* View */,
+				4DA7DBE72226787A009513B3 /* Controller */,
+				4D977846222D959E006B5288 /* Containers */,
 				4DA7DBD1222677F0009513B3 /* Main.storyboard */,
-				4DA7DBD4222677F1009513B3 /* Assets.xcassets */,
+				4DA7DBCD222677F0009513B3 /* AppDelegate.swift */,
 				4DA7DBD6222677F1009513B3 /* LaunchScreen.storyboard */,
+				4DA7DBD4222677F1009513B3 /* Assets.xcassets */,
+				4D977829222D4143006B5288 /* CallingCodes.plist */,
 				4DA7DBD9222677F1009513B3 /* Info.plist */,
 			);
 			path = HelpHoReCa_IOS;
+			sourceTree = "<group>";
+		};
+		4DA7DBE72226787A009513B3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4D97784B222DB0E0006B5288 /* Registration */,
+				4D97784A222D9692006B5288 /* PhoneNumber */,
+				4D977849222D963B006B5288 /* Country */,
+				4D97783C222D43EF006B5288 /* Verification */,
+				4D97781D222D3F77006B5288 /* MainTabBarController.swift */,
+				4DA7DBDF22267815009513B3 /* ContainerController.swift */,
+				4DA7DBE122267831009513B3 /* HomeController.swift */,
+				4DA7DBE32226784C009513B3 /* MenuController.swift */,
+				4DA7DBE522267866009513B3 /* SettingsController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4DA7DBEA222678AF009513B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4DA7DBE82226789A009513B3 /* MenuOptionCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4DA7DBED222678CA009513B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D977825222D407C006B5288 /* Country.swift */,
+				4DA7DBEB222678BF009513B3 /* MenuOption.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4DA7DBF0222678E3009513B3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4DA7DBEE222678D9009513B3 /* Protocols.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B410E67294E4B525D0C93DEC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAA4BD4EB5F19E2F570F1082 /* Pods-HelpHoReCa_IOS.debug.xcconfig */,
+				A4D01A33AB2FC399D1FE1F64 /* Pods-HelpHoReCa_IOS.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DA7DBDC222677F1009513B3 /* Build configuration list for PBXNativeTarget "HelpHoReCa_IOS" */;
 			buildPhases = (
+				DD9D13DED1EB635C3997E03A /* [CP] Check Pods Manifest.lock */,
 				4DA7DBC6222677F0009513B3 /* Sources */,
 				4DA7DBC7222677F0009513B3 /* Frameworks */,
 				4DA7DBC8222677F0009513B3 /* Resources */,
+				17942A17DDCA83E061C8C3DD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D97782A222D4143006B5288 /* CallingCodes.plist in Resources */,
 				4DA7DBD8222677F1009513B3 /* LaunchScreen.storyboard in Resources */,
 				4DA7DBD5222677F1009513B3 /* Assets.xcassets in Resources */,
 				4DA7DBD3222677F0009513B3 /* Main.storyboard in Resources */,
@@ -130,13 +324,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		17942A17DDCA83E061C8C3DD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HelpHoReCa_IOS/Pods-HelpHoReCa_IOS-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelpHoReCa_IOS/Pods-HelpHoReCa_IOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD9D13DED1EB635C3997E03A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HelpHoReCa_IOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4DA7DBC6222677F0009513B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DA7DBD0222677F0009513B3 /* ViewController.swift in Sources */,
+				4DA7DBE92226789A009513B3 /* MenuOptionCell.swift in Sources */,
+				4DA7DBEC222678BF009513B3 /* MenuOption.swift in Sources */,
+				4D977839222D42BB006B5288 /* MethodExtensions.swift in Sources */,
+				4D97781E222D3F77006B5288 /* MainTabBarController.swift in Sources */,
+				4DA7DBE622267866009513B3 /* SettingsController.swift in Sources */,
+				4D977824222D4054006B5288 /* PhoneNumberViewController.swift in Sources */,
+				4D97783F222D43EF006B5288 /* VerificationCodeViewController.swift in Sources */,
+				4D977822222D3FFC006B5288 /* PhoneNumberController.swift in Sources */,
+				4DA7DBEF222678D9009513B3 /* Protocols.swift in Sources */,
+				4DA7DBE42226784C009513B3 /* MenuController.swift in Sources */,
+				4D977840222D43EF006B5288 /* VerificationController.swift in Sources */,
+				4D97783B222D43B9006B5288 /* RegisterController.swift in Sources */,
+				4D977828222D40BE006B5288 /* CountryCodeViewController.swift in Sources */,
+				4D977838222D42BB006B5288 /* TableViewCellExtensions.swift in Sources */,
+				4DA7DBE222267831009513B3 /* HomeController.swift in Sources */,
+				4D977808222D3C52006B5288 /* ThemeManager.swift in Sources */,
 				4DA7DBCE222677F0009513B3 /* AppDelegate.swift in Sources */,
+				4D977820222D3FD8006B5288 /* PhoneNumberViewContainer.swift in Sources */,
+				4D977843222D43FA006B5288 /* VerificationViewContainer.swift in Sources */,
+				4D977826222D407C006B5288 /* Country.swift in Sources */,
+				4D977836222D42BB006B5288 /* ViewExtensions.swift in Sources */,
+				4DA7DBE022267815009513B3 /* ContainerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +541,7 @@
 		};
 		4DA7DBDD222677F1009513B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAA4BD4EB5F19E2F570F1082 /* Pods-HelpHoReCa_IOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +560,7 @@
 		};
 		4DA7DBDE222677F1009513B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4D01A33AB2FC399D1FE1F64 /* Pods-HelpHoReCa_IOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

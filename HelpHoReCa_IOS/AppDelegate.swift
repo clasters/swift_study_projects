@@ -16,9 +16,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+       
+        ThemeManager.setTheme(theme: .Light)
+        
+        let theme = ThemeManager.currentTheme()
+        ThemeManager.applyTheme(theme: theme)
+        
+        let mainController = MainTabBarController()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = mainController
+        window?.makeKeyAndVisible()
+        window?.backgroundColor = ThemeManager.currentTheme().mainBackgroundColor
+        
+        presentController(above: mainController)
         return true
     }
-
+    func presentController(above controller: UITabBarController) {
+        
+        let destination = PhoneNumberController()
+        destination.view.backgroundColor = ThemeManager.currentTheme().mainBackgroundColor
+        let newNavigationController = UINavigationController(rootViewController: destination)
+        newNavigationController.navigationBar.barTintColor = ThemeManager.currentTheme().mainBackgroundColor
+        newNavigationController.modalTransitionStyle = .coverVertical
+        controller.present(newNavigationController, animated: false, completion: nil)
+    }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
