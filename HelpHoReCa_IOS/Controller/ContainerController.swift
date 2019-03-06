@@ -71,9 +71,9 @@ class ContainerController: UIViewController {
         
         animateStatusBar()
     }
-    static func storyboardInstance() -> RegisterController? {
+    static func storyboardInstance() -> RegisterViewController? {
         let storyboard = UIStoryboard(name: "ViewController", bundle: nil)
-        return storyboard.instantiateInitialViewController() as? RegisterController
+        return storyboard.instantiateInitialViewController() as? RegisterViewController
     }
     
     func didSelectMenuOption(menuOption: MenuOption) {
@@ -91,7 +91,7 @@ class ContainerController: UIViewController {
             // let controller = ViewController()
             
             //present(UINavigationController(rootViewController: controller), animated: true, completion: nil)
-              let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RegisterController") as! RegisterController
+              let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RegisterController") as! RegisterViewController
               self.present(vc, animated: true, completion: nil)
             
         }

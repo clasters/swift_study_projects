@@ -34,14 +34,14 @@ class CountryCodeViewController: UITableViewController {
     }
     
     fileprivate func configureView() {
-        title = "Select your country"
+        title = "Выберите свою страну"
         view.backgroundColor = ThemeManager.currentTheme().mainBackgroundColor
     }
     
     fileprivate func configureSearchBar() {
         searchBar.delegate = self
         searchBar.searchBarStyle = .minimal
-        searchBar.placeholder = "Search"
+        searchBar.placeholder = "Поиск"
         searchBar.backgroundColor = ThemeManager.currentTheme().mainBackgroundColor
         searchBar.keyboardAppearance = ThemeManager.currentTheme().keyboardAppearance
         searchBar.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)

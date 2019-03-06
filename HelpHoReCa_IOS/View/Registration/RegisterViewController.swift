@@ -9,32 +9,31 @@ class RegisterViewController: UIViewController  {
     var ConfirmCode: String = ""
     fileprivate var EmailField: TextField!
     fileprivate var FirstNameField: TextField!
-    fileprivate var SecondNameField: TextField!
+    fileprivate var LastNameField: TextField!
+    //var stackview = UIStackView()
     /// A constant to layout the textFields.
-    fileprivate let constant: CGFloat = 32
+    fileprivate let constant: CGFloat = 50
     
-    @IBOutlet weak var firsNameTF: UITextField!
-    @IBOutlet weak var Navigation: UINavigationItem!
-    @IBOutlet weak var lastNameTF: UITextField!
-    @IBOutlet weak var cityTF: UITextField!
-    @IBOutlet weak var promoCodeTF: UITextField!
-    @IBOutlet weak var emailTF: UITextField!
-    @IBOutlet weak var passwordTF: UITextField!
-    @IBOutlet weak var confirmPasswordTF: UITextField!
+    @IBOutlet weak var NavBar: UINavigationBar!
     
-    @IBAction func registerButton(_ sender: UIButton) {
-        
-        let params: [String:String] = [
-            "UserName": firsNameTF.text!,
-            "LastName": lastNameTF.text!,
-            "City": cityTF.text!,
-            "Promocode": promoCodeTF.text!,
-            "Email": emailTF.text!,
-            "Password": passwordTF.text!,
-            "ConfirmPassword": confirmPasswordTF.text!,
+    @IBAction func leftBarButton(_ sender: UIBarButtonItem) {
+        // действие при нажатии "назад"
+        let destination = PhoneNumberController()
+        navigationController?.pushViewController(destination, animated: true)
+    }
+    
+    @IBAction func rightBarButton(_ sender: UIBarButtonItem) {
+       guard let params: [String:String] = [
+            "UserName": FirstNameField.text!,
+            "LastName": LastNameField.text!,
+            "City": "Казань",
+            "Promocode": "",
+            "Email": EmailField.text ?? "",
+            "Password": "Password",
+            "ConfirmPassword": "Password",
             "PhoneNumber": PhoneNumber,
             "ConfirmCode": ConfirmCode
-        ]
+        ] else { return }
         
         request("https://helphoreca.online/api/Account/Register",  method: .post, parameters: params, encoding: URLEncoding.default).validate(statusCode: 200..<300).responseJSON{ responseJSON in
             switch responseJSON.result {
@@ -42,19 +41,18 @@ class RegisterViewController: UIViewController  {
                 guard let jsonObject = value as? String else { return  }
                 if jsonObject.contains("success"){
                     
-                  let vc = ContainerController()
-                  self.present(vc, animated: true, completion: nil)
-                    
-                }else{ errorAlert(messageText: "Что-то пошло не так", controller: self) }
+                    let vc = ContainerController()
+                    self.present(vc, animated: true, completion: nil)
+                }
+                else{ errorAlert(messageText: "Что-то пошло не так", controller: self)}
             case .failure(let error):
                 errorAlert(messageText: error.localizedDescription, controller: self)
                 return
             }
         }
     }
-    
+  
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         ThemeManager.setTheme(theme: .Light)
@@ -63,14 +61,27 @@ class RegisterViewController: UIViewController  {
         ThemeManager.applyTheme(theme: theme)
         prepareSecondNameField()
         prepareEmailField()
-        
         prepareFirstNameField()
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
+        stackView.alignment = .fill
+        stackView.spacing = constant
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        view.layout(stackView).top(self.NavBar.bounds.height + 60).left(20).right(20)
+        view.addSubview(stackView)
         
-    
+        stackView.addArrangedSubview(FirstNameField)
+        stackView.addArrangedSubview(LastNameField)
+        stackView.addArrangedSubview(EmailField)
+        //view.layout(EmailField).center(offsetY: +LastNameField.bounds.height + 60).left(20).right(20)
         }
 
- 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
+    
+}
     
     extension RegisterViewController {
         fileprivate func prepareEmailField() {
@@ -78,75 +89,50 @@ class RegisterViewController: UIViewController  {
             EmailField.placeholder = "Email"
             EmailField.detail = "Получить промокод на 100р"
             EmailField.isClearIconButtonEnabled = true
-            EmailField.delegate = self
+           
             EmailField.isPlaceholderUppercasedWhenEditing = true
-            
-            
-            // Set the colors for the emailField, different from the defaults.
-          
+            EmailField.dividerNormalColor = Color.blueGrey.base
             // Set the text inset
-                  //  EmailField.textInset = 20
+            //  EmailField.textInset = 20
             
             let leftView = UIImageView()
             leftView.image = Icon.email
             EmailField.leftView = leftView
             
-            view.layout(EmailField).center(offsetY: +SecondNameField.bounds.height + 60).left(20).right(20)
         }
         
         fileprivate func prepareFirstNameField() {
             FirstNameField = TextField()
             FirstNameField.placeholder = "Имя"
-            FirstNameField.detail = "Ввелите ваше имя"
+            FirstNameField.detail = "Введите ваше имя"
             FirstNameField.isClearIconButtonEnabled = true
-            FirstNameField.delegate = self
+          
             FirstNameField.isPlaceholderUppercasedWhenEditing = true
             FirstNameField.dividerNormalColor = Color.pink.base
   
             let leftView = UIImageView()
             leftView.image = Icon.pen
             FirstNameField.leftView = leftView
-            
-          
-            view.layout(FirstNameField).center(offsetY: -SecondNameField.bounds.height - 60).left(20).right(20)
+
         }
         fileprivate func prepareSecondNameField() {
-            SecondNameField = TextField()
-            SecondNameField.placeholder = "Фамилия"
-            SecondNameField.detail = "Введите вашу фамилию"
-            SecondNameField.isClearIconButtonEnabled = true
-            SecondNameField.delegate = self
-            SecondNameField.isPlaceholderUppercasedWhenEditing = true
-            
-            SecondNameField.dividerNormalColor = Color.pink.base
-          
-            
-            
+            LastNameField = TextField()
+            LastNameField.placeholder = "Фамилия"
+            LastNameField.detail = "Введите вашу фамилию"
+            LastNameField.isClearIconButtonEnabled = true
+           
+            LastNameField.isPlaceholderUppercasedWhenEditing = true
+            LastNameField.dividerNormalColor = Color.pink.base
+
             let leftView = UIImageView()
             leftView.image = Icon.pen
-            SecondNameField.leftView = leftView
+            LastNameField.leftView = leftView
             
-            
-            view.layout(SecondNameField).center().left(20).right(20)
+        
         }
     }
     
-    
-    extension RegisterViewController: TextFieldDelegate {
-        public func textFieldDidEndEditing(_ textField: UITextField) {
-            (textField as? ErrorTextField)?.isErrorRevealed = false
-        }
-        
-        public func textFieldShouldClear(_ textField: UITextField) -> Bool {
-            (textField as? ErrorTextField)?.isErrorRevealed = false
-            return true
-        }
-        
-        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            (textField as? ErrorTextField)?.isErrorRevealed = true
-            return true
-        }
-    }
+
 
 
 

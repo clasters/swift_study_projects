@@ -52,6 +52,7 @@ class PhoneNumberViewController: UIViewController {
             self.navigationItem.rightBarButtonItem?.isEnabled = false
         } else {
             self.navigationItem.rightBarButtonItem?.isEnabled = true
+            rightBarButtonDidTap()
         }
     }
     

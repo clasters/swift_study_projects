@@ -37,7 +37,7 @@ class VerificationViewContainer: UIView {
         verificationCode.attributedPlaceholder = NSAttributedString(string: "Код", attributes: [NSAttributedString.Key.foregroundColor:
             ThemeManager.currentTheme().mainSubTitleColor])
         verificationCode.layer.borderColor = ThemeManager.currentTheme().borderColor.cgColor
-        
+        verificationCode.addTarget(self, action: #selector(VerificationController.textFieldDidChange(_:)), for: .editingChanged)
         return verificationCode
     }()
     

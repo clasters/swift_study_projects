@@ -18,7 +18,7 @@
 		4D977836222D42BB006B5288 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D977832222D42BB006B5288 /* ViewExtensions.swift */; };
 		4D977838222D42BB006B5288 /* TableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D977834222D42BB006B5288 /* TableViewCellExtensions.swift */; };
 		4D977839222D42BB006B5288 /* MethodExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D977835222D42BB006B5288 /* MethodExtensions.swift */; };
-		4D97783B222D43B9006B5288 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D97783A222D43B9006B5288 /* RegisterController.swift */; };
+		4D97783B222D43B9006B5288 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D97783A222D43B9006B5288 /* RegisterViewController.swift */; };
 		4D97783F222D43EF006B5288 /* VerificationCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D97783D222D43EF006B5288 /* VerificationCodeViewController.swift */; };
 		4D977840222D43EF006B5288 /* VerificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D97783E222D43EF006B5288 /* VerificationController.swift */; };
 		4D977843222D43FA006B5288 /* VerificationViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D977842222D43FA006B5288 /* VerificationViewContainer.swift */; };
@@ -48,7 +48,7 @@
 		4D977832222D42BB006B5288 /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		4D977834222D42BB006B5288 /* TableViewCellExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellExtensions.swift; sourceTree = "<group>"; };
 		4D977835222D42BB006B5288 /* MethodExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodExtensions.swift; sourceTree = "<group>"; };
-		4D97783A222D43B9006B5288 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		4D97783A222D43B9006B5288 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		4D97783D222D43EF006B5288 /* VerificationCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationCodeViewController.swift; sourceTree = "<group>"; };
 		4D97783E222D43EF006B5288 /* VerificationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationController.swift; sourceTree = "<group>"; };
 		4D977842222D43FA006B5288 /* VerificationViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationViewContainer.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 		4D97784B222DB0E0006B5288 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
-				4D97783A222D43B9006B5288 /* RegisterController.swift */,
+				4D97783A222D43B9006B5288 /* RegisterViewController.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -208,7 +208,6 @@
 		4DA7DBE72226787A009513B3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4D97784B222DB0E0006B5288 /* Registration */,
 				4D97784A222D9692006B5288 /* PhoneNumber */,
 				4D977849222D963B006B5288 /* Country */,
 				4D97783C222D43EF006B5288 /* Verification */,
@@ -224,6 +223,7 @@
 		4DA7DBEA222678AF009513B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4D97784B222DB0E0006B5288 /* Registration */,
 				4DA7DBE82226789A009513B3 /* MenuOptionCell.swift */,
 			);
 			path = View;
@@ -335,12 +335,16 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-HelpHoReCa_IOS/Pods-HelpHoReCa_IOS-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Material/Material.framework",
+				"${BUILT_PRODUCTS_DIR}/Motion/Motion.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Material.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Motion.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -387,7 +391,7 @@
 				4DA7DBEF222678D9009513B3 /* Protocols.swift in Sources */,
 				4DA7DBE42226784C009513B3 /* MenuController.swift in Sources */,
 				4D977840222D43EF006B5288 /* VerificationController.swift in Sources */,
-				4D97783B222D43B9006B5288 /* RegisterController.swift in Sources */,
+				4D97783B222D43B9006B5288 /* RegisterViewController.swift in Sources */,
 				4D977828222D40BE006B5288 /* CountryCodeViewController.swift in Sources */,
 				4D977838222D42BB006B5288 /* TableViewCellExtensions.swift in Sources */,
 				4DA7DBE222267831009513B3 /* HomeController.swift in Sources */,

@@ -14,12 +14,24 @@ class VerificationCodeViewController: UIViewController {
         verificationContainerView.resend.addTarget(self, action: #selector(sendSMSConfirmation), for: .touchUpInside)
         verificationContainerView.verificationCodeController = self
         configureNavigationBar()
+        
     }
     
     fileprivate func configureNavigationBar () {
         self.navigationItem.hidesBackButton = true
     }
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        setRightBarButtonStatus()
+    }
     
+    func setRightBarButtonStatus() {
+        if verificationContainerView.verificationCode.text!.count < 4 || verificationContainerView.verificationCode.text!.count > 4   {
+            self.navigationItem.rightBarButtonItem?.isEnabled = false
+        } else {
+            self.navigationItem.rightBarButtonItem?.isEnabled = true
+            rightBarButtonDidTap()
+        }
+    }
     func setRightBarButton(with title: String) {
         let rightBarButton = UIBarButtonItem(title: title, style: .done, target: self, action: #selector(rightBarButtonDidTap))
         self.navigationItem.rightBarButtonItem = rightBarButton
@@ -83,7 +95,7 @@ class VerificationCodeViewController: UIViewController {
 
         // Переход на регистрацию
   
-        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RegisterController") as! RegisterController
+        let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "RegisterController") as! RegisterViewController
         vc.PhoneNumber = self.verificationContainerView.titleNumber.text!
         vc.ConfirmCode = self.verificationContainerView.verificationCode.text!
         self.present(vc, animated: true, completion: nil)

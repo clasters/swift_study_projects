@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.8.1)
+  - Material (2.16.4):
+    - Material/Core (= 2.16.4)
+  - Material/Core (2.16.4):
+    - Motion (~> 1.4.3)
+  - Motion (1.4.3):
+    - Motion/Core (= 1.4.3)
+  - Motion/Core (1.4.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - Material
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Material
+    - Motion
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Material: 4ed78690b09ffd148b5ffab6b4367fb1d8da1cd3
+  Motion: 153ba49692997888556c7a95207278a8b1f8be95
+
+PODFILE CHECKSUM: 6bf7652ce511aba58690c491cfa1e253a3d76ed4
+
+COCOAPODS: 1.6.1
